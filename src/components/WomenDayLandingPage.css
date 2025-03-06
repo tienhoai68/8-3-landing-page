@@ -1,0 +1,218 @@
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe4e1;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Tiêu đề */
+.title {
+  margin-top: 66px;
+  font-size: 3rem;
+  color: #d6336c;
+  font-weight: bold;
+}
+
+.subtitle {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  color: #b51b4f;
+  width: 40%;
+}
+
+@keyframes floatWiggle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-50vh) rotate(10deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(-10deg);
+    opacity: 0;
+  }
+}
+@keyframes floatScale {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+/* Trái tim động bay lên */
+.heart {
+  position: absolute;
+  bottom: 0;
+  animation: floatHeartbeat 6s linear infinite;
+}
+@keyframes floatHeartbeat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-25vh) scale(1.2);
+  }
+  50% {
+    transform: translateY(-50vh) scale(1);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-75vh) scale(1.2);
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floatExplode {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) scale(1.5);
+  }
+  100% {
+    transform: translateY(-100vh) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    transform: translateY(-50vh);
+    filter: brightness(1.5);
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+    filter: brightness(2);
+  }
+}
+
+@keyframes floatBounce {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-25vh);
+  }
+  50% {
+    transform: translateY(-20vh);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-50vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+}
+
+@keyframes floatSideways {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -25vh);
+  }
+  50% {
+    transform: translate(-10px, -50vh);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(10px, -75vh);
+  }
+  100% {
+    transform: translate(0, -100vh);
+    opacity: 1;
+  }
+}
+
+/* Vùng chứa hình trái tim lớn */
+.heart-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130px;
+  height: 130px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Trái tim tĩnh nhỏ lại để thấy toàn bộ hình trái tim */
+.static-heart {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 8px !important;
+}
+
+/* Responsive trên màn hình nhỏ */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .heart-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  .static-heart {
+    font-size: 6px !important;
+  }
+
+  .heart {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 55%;
+  }
+
+  .heart-container {
+    width: 58px;
+    height: 58px;
+  }
+
+  .static-heart {
+    font-size: 5px !important;
+  }
+
+  .heart {
+    font-size: 12px !important;
+  }
+}
