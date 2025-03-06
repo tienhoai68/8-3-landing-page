@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  font-family: "Dancing Script", cursive;
   background-color: #ffe4e1;
   display: flex;
   justify-content: center;
@@ -8,6 +8,7 @@ body {
   margin: 0;
   text-align: center;
 }
+
 /* 
 .container {
   background-color: white;

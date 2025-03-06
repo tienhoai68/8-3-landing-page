@@ -14,14 +14,14 @@
 /* Tiêu đề */
 .title {
   margin-top: 66px;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #d6336c;
   font-weight: bold;
 }
 
 .subtitle {
   margin-top: 4px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #b51b4f;
   width: 36%;
 }
@@ -195,12 +195,13 @@
 @media (max-width: 480px) {
   .title {
     font-size: 1.6rem;
+    /* margin-top: 22%; */
   }
 
   .subtitle {
-    font-size: 0.8rem;
+    font-size: 14px;
     font-weight: 600;
-    width: 55%;
+    width: 56%;
   }
 
   .heart-container {

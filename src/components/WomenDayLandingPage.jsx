@@ -39,7 +39,7 @@ export default function WomenDayLandingPage() {
       <h1 className="title">Happy Wonmen's Day</h1>
       <p className="subtitle">
         Chúc em bé của anh một ngày 8/3 thật ý nghĩa, luôn vui vẻ và hạnh phúc
-        💞, chúc em chân cứng đá mềm, đường xa không mõi, đường đời có anh 💖,
+        💞, chúc em chân cứng đá mềm, đường xa không mỏi, đường đời có anh 💖,
         chúc em tất cả trừ vất vả nhe.
       </p>
       <p className="subtitle">💕 Love you 💕</p>
