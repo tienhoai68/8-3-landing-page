@@ -5,6 +5,7 @@ import "./WomenDayLandingPage.css";
 export default function WomenDayLandingPage() {
   const [hearts, setHearts] = useState([]);
   const staticHearts = [];
+  const heartIcons = ["💞", "❤️", "💖", "💗", "💕", "💓", "💘", "💝"]; // Danh sách icon trái tim
 
   // Hàm tạo hình trái tim từ nhiều trái tim nhỏ (hình trái tim bằng công thức toán học)
   for (let t = 0; t < Math.PI * 2; t += 0.1) {
@@ -27,12 +28,13 @@ export default function WomenDayLandingPage() {
           id: Math.random(),
           left: Math.random() * 100, // Ngẫu nhiên theo chiều ngang
           size: Math.random() * 30 + 10, // Kích thước ngẫu nhiên
+          icon: heartIcons[Math.floor(Math.random() * heartIcons.length)], // Chọn icon trái tim ngẫu nhiên
         },
       ]);
-    }, 600); // Tạo trái tim nhanh hơn
+    }, 800); // Tạo trái tim nhanh hơn
 
     return () => clearInterval(interval);
-  }, []);
+  }, [heartIcons]);
 
   return (
     <div className="container">
@@ -43,20 +45,21 @@ export default function WomenDayLandingPage() {
         chúc em tất cả trừ vất vả nhe.
       </p>
       <p className="subtitle">💕 Love you 💕</p>
+
       {/* Hiển thị các trái tim động */}
       {hearts.map((heart) => (
         <motion.div
           key={heart.id}
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: -window.innerHeight }}
-          transition={{ duration: 4, ease: "easeOut" }}
+          transition={{ duration: 5, ease: "easeOut" }}
           className="heart"
           style={{
             left: `${heart.left}%`,
             fontSize: `${heart.size}px`,
           }}
         >
-          ❤️
+          {heart.icon}
         </motion.div>
       ))}
 
@@ -72,7 +75,7 @@ export default function WomenDayLandingPage() {
               fontSize: `${heart.size}px`,
             }}
           >
-            ❤️
+            💖
           </div>
         ))}
       </div>

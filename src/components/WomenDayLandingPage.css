@@ -165,7 +165,7 @@
 .static-heart {
   position: absolute;
   transform: translate(-50%, -50%);
-  font-size: 8px !important;
+  font-size: 12px !important;
 }
 
 /* Responsive trên màn hình nhỏ */
@@ -210,7 +210,7 @@
   }
 
   .static-heart {
-    font-size: 5px !important;
+    font-size: 8px !important;
   }
 
   .heart {
